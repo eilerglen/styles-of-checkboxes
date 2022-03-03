@@ -1,0 +1,143 @@
+@import url(../vendor/fonts.css);
+
+.page {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern";
+}
+
+.form {
+  width: 320px;
+  height: 100vh;
+  background: rgba(255, 255, 255, .95);
+  border-right: 1px solid #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: left .5s;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.form_is-closed {
+  left: -320px;
+}
+
+.form__main-container {
+  height: calc(100vh - 40px);
+  overflow-y: scroll;
+}
+
+.form__toggle {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, .95);
+  position: absolute;
+  top: 0;
+  right: -40px;
+  display: flex;
+  cursor: pointer;
+  transition: opacity .4s;
+}
+
+.form__toggle:hover {
+  opacity: .5;
+}
+
+.form__toggle-image {
+  width: 12px;
+  height: 18px;
+  margin: auto;
+}
+
+.form__heading {
+  font-size: 28px;
+  line-height: 32px;
+  width: 240px;
+  margin: 23px auto 0;
+}
+
+.form__line {
+  height: 1px;
+  background-color: #000;
+}
+
+.form__label {
+
+  margin: 35px auto 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.form__input-container {
+  width: 240px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.content {
+  font-family: 'Playfair Display', serif;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.content__heading {
+  font-size: 55px;
+  width: 523px;
+  margin: auto;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content__subheading {
+  text-align: center;
+  width: 430px;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 40px auto;
+}
+
+.content__image-item {
+  width: 100%;
+}
+
+.content__image-copyright {
+  font-size: 14px;
+  margin-top: 20px;
+}
+.content__text {
+  width: 70%;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 30px auto;
+  column-count: 1;
+  column-gap: 40px;
+}
+
+.content__paragraph {
+  margin: 30px 0;
+}
+
+.content__link {
+  color: black;
+}
+
+.content__date {
+  font-size: 20px;
+  width: 70%;
+  margin: 90px auto 0;
+  text-decoration: underline;
+}
+
+.content__author {
+  font-size: 20px;
+  width: 70%;
+  margin: 20px auto 0;
+}
+
+.footer__container {
+  height: 100px;
+}
