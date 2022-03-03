@@ -24,10 +24,6 @@
   left: -320px;
 }
 
-.form__main-container {
-  height: calc(100vh - 40px);
-  overflow-y: scroll;
-}
 
 .form__toggle {
   width: 40px;
@@ -51,11 +47,38 @@
   margin: auto;
 }
 
+.form_is-closed .form__toggle-image {
+  transform: rotate(180deg);
+}
+
+.form__main-container {
+  height: calc(100vh - 40px);
+  overflow-y: scroll;
+}
+
 .form__heading {
   font-size: 28px;
   line-height: 32px;
   width: 240px;
   margin: 23px auto 0;
+}
+
+.form__heading_type_ctrl-el-heading {
+  margin: 35px auto 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.form__admin {
+  height: 100vh;
+}
+
+.form__input-container {
+  width: 240px;
+  margin: auto;
+  padding-bottom: 50px;
+  border: 0;
 }
 
 .form__line {
@@ -68,6 +91,13 @@
   margin: 35px auto 0;
   font-size: 20px;
   line-height: 30px;
+}
+
+.form__label_direction_right {
+  display: inline;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 10px;
 }
 
 .form__input-container {
