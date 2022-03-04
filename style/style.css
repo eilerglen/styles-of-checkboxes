@@ -136,6 +136,33 @@
   outline-color: #fff6c5;
 }
 
+.form__item::placeholder {
+  font-family: 'Alegreya Sans';
+  font-size: 14px;
+  line-height: 20px;
+  color: #bcbcc4;
+} 
+
+.form__item::-webkit-input-placeholder {
+    font-size: 14px;
+    font-family: 'Alegreya Sans';
+    line-height: 20px;
+    color: #bcbcc4;
+} 
+
+.form__item::-moz-placeholder {
+    font-size: 14px;
+    font-family: 'Alegreya Sans';
+    line-height: 20px;
+    color: #bcbcc4;
+} 
+.form__item::-ms-input-placeholder {
+  font-size: 14px;
+  font-family: 'Alegreya Sans';
+  line-height: 20px;
+  color: #bcbcc4;
+}
+
 .form__item_el_main-text {
   background: #fff;
   height: 150px;
@@ -164,13 +191,13 @@
   width: 144px;
 }
 
-.form__item[type="checkbox"] {
+/* .form__item[type="checkbox"] {
   display: inline-block;
   width: 16px;
   height: 16px;
   vertical-align: middle;
   margin: 0;
-}
+} */
 
 .form__item[type="date"] {
   background-color: white;
@@ -186,14 +213,14 @@ select.form__item {
   border: 1px solid #bcbcc4;
 }
 
-.form__item[type="radio"] {
+/* .form__item[type="radio"] {
   display: inline-block;
   width: 16px;
   height: 16px;
 }
 .form__item[type="radio"][value="two-columns"] {
   margin-left: 25px;
-}
+} */
 
 .form__label_direction_right {
   display: inline;
@@ -280,3 +307,63 @@ select.form__item {
 .footer__container {
   height: 100px;
 }
+
+.form__item_el_number-of-columns {
+  position: absolute;
+  width: 1;
+  height: 1;
+  overflow: hidden;
+  clip: rect(0 0 0 0)
+}
+
+.form__item_el_extra-options {
+  position: absolute;
+  width: 1px; /* если у элемента не будет размеров, некоторые браузеры посчитают, что его вообще нет */
+  height: 1px;
+  overflow: hidden; /* без этого свойства тоже сработает, но так наверняка. Мы его ещё изучим, оно скрывает элементы, выходящие за границы родителя */
+  clip: rect(0 0 0 0);
+}
+
+.form__pseudo-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black; 
+}
+.form__pseudo-item_type_radio {
+  border-radius: 50%;
+}
+
+.form__item_el_number-of-columns:checked + .form__pseudo-item_type_radio {
+  background-image: url(https://code.s3.yandex.net/web-code/plane.svg);
+}
+
+.form__item_el_extra-options:checked + .form__pseudo-item_type_checkbox {
+    background-image: url(https://code.s3.yandex.net/web-code/tick.svg);
+} 
+
+.form__item_el_number-of-columns:disabled + .form__pseudo-item_type_radio {
+    border: 1px solid grey;
+}
+
+.form__item_el_number-of-columns:disabled:checked + .form__pseudo-item_type_radio {
+    background-image: url(https://code.s3.yandex.net/web-code/plane_grey.svg);
+}
+
+.form__item_el_number-of-columns:focus + .form__pseudo-item_type_radio {
+    box-shadow: 0 0 5px #fff6c5;
+} 
+
+.form__item_el_extra-options:disabled + .form__pseudo-item_type_checkbox {
+   border: 1px solid grey;
+} 
+
+.form__item_el_extra-options:disabled:checked + .form__pseudo-item_type_checkbox {
+  background-image: url(https://code.s3.yandex.net/web-code/tick_grey.svg);
+}
+
+.form__item_el_extra-options:focus + .form__pseudo-item_type_checkbox {
+    box-shadow: 0 0 5px #fff6c5;
+} 
+
