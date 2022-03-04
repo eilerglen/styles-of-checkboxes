@@ -7,6 +7,8 @@
 1. HTML.
 2. CSS. 
 3. Верстка форм
+4. JS
+
 
 ### Ссылка на GitHub Pages
 [Ссылка на лендинг на GitHub Pages](https://eilerglen.github.io/styles-of-checkboxes/index.html)
